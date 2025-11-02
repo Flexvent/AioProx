@@ -47,28 +47,19 @@ class Proxy:
         # Built-in proxy sources
         self.sources = {
             "speedx": {
-                "http": "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt",
+                "http": "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/refs/heads/master/http.txt",
                 "socks4": "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks4.txt",
                 "socks5": "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks5.txt",
             },
-            "monosans": {
-                "http": "https://raw.githubusercontent.com/monosans/PROXY-List/master/proxies/http.txt",
-                "socks4": "https://raw.githubusercontent.com/monosans/PROXY-List/master/proxies/socks4.txt",
-                "socks5": "https://raw.githubusercontent.com/monosans/PROXY-List/master/proxies/socks5.txt",
-            },
-            "shiftytr": {
-                "http": "https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/http.txt",
-                "socks4": "https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/socks4.txt",
-                "socks5": "https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/socks5.txt",
-            },
-            "freeproxy": {
-                "http": "https://raw.githubusercontent.com/FreeProxyList/FreeProxyList/main/http.txt",
-                "socks4": "https://raw.githubusercontent.com/FreeProxyList/FreeProxyList/main/socks4.txt",
-                "socks5": "https://raw.githubusercontent.com/FreeProxyList/FreeProxyList/main/socks5.txt",
-            },
-            "test": {
-                "socks5": "https://raw.githubusercontent.com/proxifly/free-proxy-list/refs/heads/main/proxies/protocols/socks5/data.txt",
-            },
+            "proxifly": { #new source added
+                "http": "https://raw.githubusercontent.com/proxifly/free-proxy-list/refs/heads/main/proxies/protocols/http/data.txt",
+                "socks4": "https://raw.githubusercontent.com/proxifly/free-proxy-list/refs/heads/main/proxies/protocols/socks4/data.txt",
+                "socks5": "https://raw.githubusercontent.com/proxifly/free-proxy-list/refs/heads/main/proxies/protocols/socks5/data.txt",},
+
+            "databay": { #new source added
+
+                "http": "https://raw.githubusercontent.com/databay-labs/free-proxy-list/refs/heads/master/http.txt",
+                "socks5": "https://raw.githubusercontent.com/databay-labs/free-proxy-list/refs/heads/master/socks5.txt",},
         }
 
         if self.custom_source:
